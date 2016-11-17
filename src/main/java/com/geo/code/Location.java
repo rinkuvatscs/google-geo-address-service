@@ -19,7 +19,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Location {
 
-    @JsonProperty("lat")
+    @Override
+	public String toString() {
+		return "Location [lat=" + lat + ", lng=" + lng
+				+ ", additionalProperties=" + additionalProperties + "]";
+	}
+
+	@JsonProperty("lat")
     private Double lat;
     @JsonProperty("lng")
     private Double lng;

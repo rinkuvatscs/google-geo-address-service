@@ -50,7 +50,16 @@ public class Result {
         return addressComponents;
     }
 
-    /**
+    @Override
+	public String toString() {
+		return "Result [addressComponents=" + addressComponents
+				+ ", formattedAddress=" + formattedAddress + ", geometry="
+				+ geometry + ", partialMatch=" + partialMatch + ", placeId="
+				+ placeId + ", types=" + types + ", additionalProperties="
+				+ additionalProperties + "]";
+	}
+
+	/**
      * 
      * @param addressComponents
      *     The address_components

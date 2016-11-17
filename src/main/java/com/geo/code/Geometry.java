@@ -21,7 +21,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Geometry {
 
-    @JsonProperty("bounds")
+    @Override
+	public String toString() {
+		return "Geometry [bounds=" + bounds + ", location=" + location
+				+ ", locationType=" + locationType + ", viewport=" + viewport
+				+ ", additionalProperties=" + additionalProperties + "]";
+	}
+
+	@JsonProperty("bounds")
     private Bounds bounds;
     @JsonProperty("location")
     private Location location;
